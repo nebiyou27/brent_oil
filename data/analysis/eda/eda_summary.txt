@@ -1,0 +1,25 @@
+# Exploratory Data Analysis Summary
+
+Dataset dimensions: 10261 rows, 8 columns
+
+Available features: price, close, price_pct_change_1m, price_pct_change_3m, price_pct_change_6m, price_3month_volatility, year, quarter
+
+## Price Statistics
+Average price: $51.20
+Minimum price: $9.10
+Maximum price: $143.95
+Price standard deviation: $33.25
+
+## Return Statistics
+Average monthly return: 0.04%
+Maximum positive monthly return: 50.99%
+Maximum negative monthly return: -47.47%
+
+## Key Correlations with Price
+year: 0.724
+price_3month_volatility: 0.398
+close: 0.333
+price_pct_change_6m: 0.024
+quarter: 0.018
+price_pct_change_3m: 0.016
+price_pct_change_1m: 0.008
