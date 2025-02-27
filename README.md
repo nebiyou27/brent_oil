@@ -1,98 +1,153 @@
-### **📌 Brent Oil Price Analysis – Task 1**  
-**Task: Defining the Data Analysis Workflow & Understanding the Model**  
+## Project Overview
 
----
+The Brent Oil Price Analysis Dashboard is designed to analyze Brent oil prices, identify influencing factors, and provide an interactive visualization tool. The project consists of three main tasks:
 
-## **📖 Project Overview**  
-This project aims to analyze how major political and economic events impact **Brent oil prices**. We will focus on identifying key events, measuring their effects on price fluctuations, and extracting meaningful insights for investors, policymakers, and energy companies.  
+1. **Data Analysis Workflow and Understanding the Model and Data**
+2. **Analysis and Modeling of Brent Oil Prices**
+3. **Interactive Dashboard Development**
 
-Task 1 specifically involves **defining the data analysis workflow** and **understanding the model and data** before deeper statistical modeling is applied.  
+## Task 1: Data Analysis Workflow and Understanding the Model and Data
 
----
+### Defining the Data Analysis Workflow
 
-## **🎯 Objectives of Task 1**  
-1️⃣ **Define the Data Analysis Workflow:**  
-   - Plan the step-by-step analysis process.  
-   - Ensure clarity on data sources, assumptions, and limitations.  
-   - Identify statistical techniques to be used.  
+#### Objective
+To establish a structured approach for analyzing Brent oil prices.
 
-2️⃣ **Understand the Model and Data:**  
-   - Explore the historical **Brent oil price dataset** (May 20, 1987 – Sept 30, 2022).  
-   - Review statistical models suitable for time series analysis (e.g., **ARIMA, GARCH, Bayesian models**).  
-   - Identify how event-driven market changes can be detected.  
+#### Steps:
+- Define the analysis process and methodology.
+- Understand data generation, sampling, and compilation.
+- Identify model inputs, parameters, and outputs.
+- Clarify assumptions and limitations.
+- Determine communication channels for presenting results.
 
-3️⃣ **Prepare for Further Analysis:**  
-   - Identify key economic and political events.  
-   - Understand how to communicate findings to stakeholders.  
-   - Document insights for the **interim report**.  
+#### Understanding the Model and Data
+- Review literature and references to understand key concepts and models.
+- Study time series analysis models (e.g., ARIMA, GARCH) and their application.
+- Identify data sources and generation processes.
+- Define expected outputs and limitations.
 
----
+## Task 2: Analysis and Modeling of Brent Oil Prices
 
-## **📂 Folder Structure**  
-The repository is structured as follows:  
+### Analysis of Brent Oil Prices
 
-```
-brent_oil_task1/
-│── data/                # Stores the dataset  
-│   ├── raw/             # Original dataset (Brent oil prices)  
-│   ├── processed/       # Cleaned/Formatted data  
-│── notebooks/           # Jupyter notebooks for exploration  
-│   ├── 01_data_exploration.ipynb  # Initial EDA & visualization  
-│── src/                 # Scripts for data processing and modeling  
-│   ├── data_loader.py   # Load and preprocess data  
-│   ├── eda.py           # Functions for EDA & visualization  
-│── reports/             # Interim report on workflow and model understanding  
-│── README.md            # Task description and instructions  
-│── requirements.txt     # Dependencies (pandas, matplotlib, ruptures, etc.)  
-│── .gitignore           # Ignore unnecessary files  
-```
+#### Objective
+To apply analytical methods to historical Brent oil price data.
 
----
+#### Methodology
+- Utilize time series analysis models (e.g., ARIMA, GARCH, VAR, Markov-Switching ARIMA).
+- Implement machine learning models (e.g., LSTM) for pattern recognition.
+- Analyze economic, technological, and political factors affecting prices:
+  - Economic Indicators: GDP, inflation, unemployment, exchange rates.
+  - Technological Changes: Extraction methods, renewable energy adoption.
+  - Political and Regulatory Factors: Trade policies, environmental regulations.
 
-## **📊 Dataset Overview**  
-- **Source**: Historical Brent oil price dataset  
-- **Time Span**: **May 20, 1987 – September 30, 2022**  
-- **Columns**:  
-  - `Date`: The recorded date (Format: `day-month-year`)  
-  - `Price`: Brent oil price in **USD per barrel**  
+### Adapting the Model to New Scenarios
 
----
+#### Objective
+To extend the analysis framework to different scenarios and datasets.
 
-## **🛠 Tools & Technologies**  
-- **Programming Language**: Python 🐍  
-- **Libraries**:  
-  - `pandas` – Data handling  
-  - `matplotlib` – Visualization  
-  - `ruptures` – Change point detection  
-  - `PyMC3` – Bayesian modeling  
-  - `statsmodels` – Time series analysis  
+#### Methodology
+- Apply analysis to other commodities (e.g., natural gas, coal).
+- Integrate new variables and data sources.
+- Validate models using backtesting, out-of-sample testing, and cross-validation.
 
----
+### Suggested Approach
 
-## **🚀 Next Steps**  
-✔ Load and explore the dataset in **Jupyter Notebook**.  
-✔ Review key time series models (**ARIMA, GARCH, Bayesian models**).  
-✔ Identify assumptions, limitations, and expected outputs.  
-✔ Prepare the **Interim Report** covering workflow and model understanding.  
+#### Data Collection
+- Gather data from World Bank, IMF, IEA, and industry reports.
 
----
+#### Data Preprocessing
+- Clean and preprocess data, handle missing values and outliers.
 
-## **📢 Contribution Guidelines**  
-1️⃣ Clone the repo:  
-   ```bash
-   git clone https://github.com/your-username/brent_oil_task1.git
-   cd brent_oil_task1
-   ```  
-2️⃣ Install dependencies:  
-   ```bash
+#### Exploratory Data Analysis (EDA)
+- Identify patterns, trends, and relationships via visualizations.
+
+#### Model Building
+- Develop multiple models: time series, econometric, machine learning.
+
+#### Model Evaluation
+- Evaluate models using RMSE, MAE, R-squared.
+
+#### Insight Generation
+- Interpret model outputs and provide recommendations.
+
+## Task 3: Developing an Interactive Dashboard
+
+### Dashboard Application
+
+#### Objective
+To develop an interactive dashboard for data visualization.
+
+#### Technologies
+- **Backend:** Flask (Python)
+- **Frontend:** React (JavaScript)
+- **Chart Libraries:** Recharts, D3.js, or others
+
+#### Key Components
+
+##### Backend (Flask)
+- Develop APIs for serving analysis data.
+- Handle dataset requests, model outputs, and metrics.
+- Integrate data sources for real-time updates (optional).
+
+##### Frontend (React)
+- Build an intuitive user interface.
+- Design interactive visualizations showing trends and correlations.
+- Implement filtering, date ranges, and comparisons.
+- Ensure responsiveness across devices.
+
+#### Key Features
+- Display historical trends, forecasts, and correlations.
+- Highlight major events impacting oil prices.
+- Provide data filtering and drill-down capabilities.
+- Show key indicators (volatility, price changes, model accuracy).
+
+## Installation and Setup
+
+### Backend (Flask)
+
+1. Navigate to the `backend` directory.
+2. Create a virtual environment:
+   ```sh
+   python -m venv venv
+   ```
+3. Activate the environment:
+   - Windows:
+     ```sh
+     venv\Scripts\activate
+     ```
+   - macOS/Linux:
+     ```sh
+     source venv/bin/activate
+     ```
+4. Install dependencies:
+   ```sh
    pip install -r requirements.txt
-   ```  
-3️⃣ Work on **notebooks/src/reports** as per task requirements.  
-4️⃣ Commit and push updates:  
-   ```bash
-   git add .
-   git commit -m "Added EDA and workflow documentation"
-   git push origin main
-   ```  
+   ```
+5. Run the Flask app:
+   ```sh
+   python app.py
+   ```
 
+### Frontend (React)
+
+1. Navigate to the `frontend` directory.
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the React app:
+   ```sh
+   npm start
+   ```
+
+## Usage
+
+- Access the dashboard in your browser at `http://localhost:3000`.
+- Navigate through the sections (Dashboard, Historical Analysis, Forecast, Model Performance, Events).
+- Interact with visualizations and filters to analyze the data.
+
+## Contributing
+
+Contributions are welcome! Submit a pull request or create an issue to discuss improvements.
 
